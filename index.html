@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infinity Estética & Saúde — Dra. Jessica Regina</title>
+<meta name="description" content="Clínica de Estética Infinity, Dra. Jessica Regina. Preenchimento labial, rinomodelação, criolipólise e lipo sem corte em São José, SC. Nota 5,0 com mais de 270 avaliações no Google.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --cream:#FAF8F4;
+  --sand:#F1EADC;
+  --gold:#C9A227;
+  --gold-deep:#9C7A1C;
+  --teal:#BFE0DC;
+  --ink:#2B2620;
+  --ink-soft:#4A4238;
+  --stone:#857D6E;
+  --line:rgba(43,38,32,0.14);
+  --shadow:0 24px 70px -30px rgba(43,38,32,0.35);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+}
+body{
+  font-family:'Urbanist',sans-serif;
+  color:var(--ink);
+  background:var(--cream);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4{
+  font-family:'Marcellus',serif;
+  font-weight:400;
+  line-height:1.18;
+  letter-spacing:0.005em;
+  color:var(--ink);
+}
+a{color:inherit; text-decoration:none;}
+img{max-width:100%; display:block;}
+.container{max-width:1140px; margin:0 auto; padding:0 32px;}
+@media(max-width:640px){.container{padding:0 20px;}}
+
+.eyebrow{font-size:0.74rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold-deep);}
+
+/* ---------- BUTTONS ---------- */
+.btn{display:inline-flex; align-items:center; gap:10px; padding:16px 30px; border-radius:100px; font-weight:600; font-size:0.94rem; transition:transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease; white-space:nowrap;}
+.btn-primary{background:var(--gold); color:#fff; box-shadow:0 14px 32px -12px rgba(201,162,39,0.55);}
+.btn-primary:hover{background:var(--gold-deep); transform:translateY(-2px);}
+.btn-ghost{background:transparent; color:var(--ink); border:1.5px solid var(--line);}
+.btn-ghost:hover{border-color:var(--gold); color:var(--gold-deep);}
+.btn-ghost-light{background:transparent; color:#fff; border:1.5px solid rgba(255,255,255,0.4);}
+.btn-ghost-light:hover{border-color:#fff; background:rgba(255,255,255,0.1);}
+.btn svg{width:18px; height:18px; flex-shrink:0;}
+
+/* ---------- SCROLL PROGRESS ---------- */
+.scroll-progress{position:fixed; top:0; left:0; height:2.5px; width:0%; background:var(--gold); z-index:200;}
+
+/* ---------- NAV ---------- */
+header{position:fixed; top:0; left:0; right:0; z-index:100; padding:20px 0; transition:background 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;}
+header.scrolled{background:rgba(250,248,244,0.94); backdrop-filter:blur(10px); box-shadow:0 1px 0 var(--line); padding:14px 0;}
+.nav-inner{display:flex; align-items:center; justify-content:space-between; gap:20px;}
+.logo-mark{display:flex; align-items:center; flex-shrink:0;}
+.logo-mark img{height:34px; width:auto;}
+.nav-links{display:flex; align-items:center; gap:26px; font-size:0.86rem; font-weight:600;}
+.nav-links a{position:relative; padding:4px 0;}
+.nav-links a::after{content:''; position:absolute; left:0; bottom:-2px; width:0; height:1.5px; background:var(--gold); transition:width 0.25s ease;}
+.nav-links a:hover::after{width:100%;}
+.nav-cta{display:flex; align-items:center; gap:14px; flex-shrink:0;}
+.nav-cta .btn{padding:12px 22px; font-size:0.85rem;}
+.menu-toggle{display:none; background:none; border:none; cursor:pointer; padding:6px; z-index:200; flex-shrink:0; color:var(--ink);}
+.menu-toggle span{display:block; width:24px; height:2px; background:currentColor; margin:5px 0; transition:0.3s;}
+
+@media(max-width:900px){
+  .nav-links{position:fixed; inset:0; background:var(--ink); color:var(--cream); flex-direction:column; justify-content:center; gap:26px; font-size:1.3rem; font-family:'Marcellus',serif; transform:translateX(100%); transition:transform 0.4s ease;}
+  .nav-links.open{transform:translateX(0);}
+  .nav-links a{color:var(--cream) !important;}
+  .nav-cta .btn-ghost{display:none;}
+  .menu-toggle{display:block;}
+}
+@media(max-width:480px){
+  .nav-cta .btn-primary span{display:none;}
+  .nav-cta .btn-primary{padding:13px;}
+}
+
+/* ---------- HERO ---------- */
+.hero{position:relative; padding:158px 0 100px; background:linear-gradient(180deg, var(--cream) 0%, var(--sand) 100%); overflow:hidden;}
+.hero-grid{display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:center;}
+@media(max-width:960px){.hero-grid{grid-template-columns:1fr; gap:40px;}}
+.hero-eyebrow{display:inline-flex; align-items:center; gap:10px; margin-bottom:22px;}
+.hero-eyebrow .dot{width:6px; height:6px; border-radius:50%; background:var(--gold);}
+.hero h1{font-size:clamp(2.2rem, 4.2vw, 3.6rem);}
+.hero h1 em{font-style:italic; color:var(--gold-deep);}
+.hero p.lede{margin-top:24px; max-width:480px; font-size:1.08rem; color:var(--ink-soft);}
+.hero-actions{margin-top:34px; display:flex; flex-wrap:wrap; gap:16px;}
+.hero-stats{margin-top:48px; display:flex; flex-wrap:wrap; gap:36px; padding-top:26px; border-top:1px solid var(--line);}
+.hero-stats .stat b{display:block; font-family:'Marcellus',serif; font-size:1.7rem; color:var(--gold-deep);}
+.hero-stats .stat span{font-size:0.8rem; color:var(--stone);}
+.hero-photo-card{position:relative; border-radius:20px; overflow:hidden; box-shadow:var(--shadow); max-width:420px; margin:0 auto; border:6px solid #fff; outline:1px solid var(--line);}
+.hero-photo-card img{width:100%; height:auto; object-fit:cover;}
+
+/* ---------- INFINITY DIVIDER (signature) ---------- */
+.divider{position:relative; height:90px; display:flex; align-items:center; justify-content:center; overflow:hidden;}
+.divider svg{width:70px; height:36px;}
+.divider path{stroke:var(--gold); stroke-width:1.6; fill:none; stroke-dasharray:220; stroke-dashoffset:220; opacity:0.85;}
+.divider.revealed path{animation:infDraw 1.6s cubic-bezier(0.65,0,0.35,1) forwards;}
+@keyframes infDraw{to{stroke-dashoffset:0;}}
+
+/* ---------- SECTION SHARED ---------- */
+section{padding:100px 0;}
+@media(max-width:640px){section{padding:70px 0;}}
+.section-head{max-width:640px; margin-bottom:50px;}
+.section-head.center{margin-left:auto; margin-right:auto; text-align:center;}
+.section-head h2{font-size:clamp(1.9rem, 3.2vw, 2.5rem); margin-top:10px;}
+.section-head p{margin-top:16px; font-size:1.02rem; color:var(--stone);}
+
+/* ---------- REVEAL / STAGGER ---------- */
+.reveal{opacity:0; transform:translateY(28px); transition:opacity 0.8s ease, transform 0.8s ease;}
+.reveal.in{opacity:1; transform:translateY(0);}
+.stagger-item{opacity:0; transform:translateY(24px); transition:opacity 0.7s ease, transform 0.7s ease;}
+.stagger-item.in{opacity:1; transform:translateY(0);}
+
+/* ---------- SOBRE ---------- */
+.sobre{background:#fff;}
+.sobre-inner{max-width:760px;}
+.sobre p{font-size:1.06rem; color:var(--ink-soft); margin-top:16px;}
+.sobre p:first-of-type{margin-top:0;}
+
+/* ---------- OFERTA GRATUITA ---------- */
+.lead{background:var(--ink); color:var(--cream);}
+.lead-grid{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center;}
+@media(max-width:860px){.lead-grid{grid-template-columns:1fr; gap:32px; text-align:center;}}
+.lead .eyebrow{color:#E8CE8A;}
+.lead h2{color:var(--cream); font-size:clamp(1.9rem,3.4vw,2.6rem);}
+.lead p{margin-top:18px; color:rgba(250,248,244,0.72); font-size:1.05rem;}
+.lead-card{background:rgba(250,248,244,0.06); border:1px solid rgba(250,248,244,0.18); border-radius:16px; padding:44px; text-align:center;}
+.lead-card .ico{width:56px; height:56px; border-radius:50%; background:rgba(201,162,39,0.15); display:flex; align-items:center; justify-content:center; color:var(--gold); margin:0 auto 20px;}
+.lead-card .ico svg{width:26px; height:26px;}
+.lead-card h3{color:var(--cream); font-size:1.3rem;}
+.lead-card p{color:rgba(250,248,244,0.65); font-size:0.94rem; margin-top:10px;}
+.lead-card .btn{margin-top:24px; width:100%; justify-content:center;}
+
+/* ---------- SERVIÇOS ---------- */
+.servicos{background:var(--sand);}
+.serv-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:20px;}
+@media(max-width:640px){.serv-grid{grid-template-columns:1fr;}}
+.serv-card{background:#fff; border:1px solid var(--line); border-radius:14px; padding:32px 28px; display:flex; flex-direction:column; height:100%; transition:transform 0.3s ease, box-shadow 0.3s ease;}
+.serv-card:hover{transform:translateY(-6px); box-shadow:var(--shadow);}
+.serv-card h3{font-size:1.2rem; font-weight:400;}
+.serv-card p{margin-top:10px; color:var(--stone); font-size:0.9rem; flex-grow:1;}
+.serv-card a.link{margin-top:18px; display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:0.85rem; color:var(--gold-deep);}
+.serv-card a.link svg{width:14px; height:14px; transition:transform 0.2s ease;}
+.serv-card a.link:hover svg{transform:translateX(4px);}
+
+/* ---------- OFERTA ---------- */
+.oferta{background:#fff;}
+.plan-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+@media(max-width:900px){.plan-grid{grid-template-columns:1fr; max-width:440px; margin:0 auto;}}
+.plan{background:var(--cream); border:1px solid var(--line); border-radius:14px; padding:38px 30px; display:flex; flex-direction:column; text-align:center; transition:transform 0.3s ease, box-shadow 0.3s ease;}
+.plan:hover{transform:translateY(-6px); box-shadow:var(--shadow);}
+.plan.featured{border-color:var(--gold); background:#fff; position:relative; box-shadow:var(--shadow);}
+.plan.featured .tag{position:absolute; top:-13px; left:50%; transform:translateX(-50%); background:var(--gold); color:#fff; font-size:0.68rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; padding:5px 13px; border-radius:100px; white-space:nowrap;}
+.plan .plan-name{font-family:'Marcellus',serif; font-size:1.4rem;}
+.plan .plan-desc{color:var(--stone); font-size:0.92rem; margin-top:10px; margin-bottom:24px; flex-grow:1;}
+.plan .btn{width:100%; justify-content:center;}
+
+/* ---------- PROVA SOCIAL ---------- */
+.social-proof{background:var(--sand);}
+.proof-stat{display:flex; align-items:baseline; gap:10px; margin-bottom:44px; flex-wrap:wrap;}
+.proof-stat b{font-family:'Marcellus',serif; font-size:2.8rem; color:var(--gold-deep);}
+.proof-stat span{font-size:1rem; color:var(--stone);}
+.testi-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+@media(max-width:900px){.testi-grid{grid-template-columns:1fr; max-width:480px; margin:0 auto;}}
+.testi-card{background:#fff; border-radius:14px; padding:30px 28px; box-shadow:var(--shadow);}
+.testi-card p{font-family:'Marcellus',serif; font-style:italic; font-size:1.05rem; color:var(--ink-soft); line-height:1.55;}
+.testi-card .who{margin-top:20px; font-size:0.86rem; font-weight:700; color:var(--gold-deep);}
+
+/* ---------- LOCALIZAÇÃO ---------- */
+.local{background:#fff;}
+.local-grid{display:grid; grid-template-columns:1.05fr 0.95fr; gap:60px; align-items:center;}
+@media(max-width:900px){.local-grid{grid-template-columns:1fr; gap:36px;}}
+.local-card{background:var(--cream); border:1px solid var(--line); border-radius:14px; padding:36px;}
+.info-row{display:flex; gap:14px; padding:16px 0; border-top:1px solid var(--line);}
+.info-row:first-child{border-top:none; padding-top:0;}
+.info-row svg{width:19px; height:19px; flex-shrink:0; margin-top:2px; color:var(--gold);}
+.info-row h4{font-size:0.9rem; font-weight:700;}
+.info-row p, .info-row a{font-size:0.88rem; color:var(--stone); margin-top:2px;}
+.info-row a:hover{color:var(--gold-deep);}
+.hours-table{display:grid; grid-template-columns:1fr auto; gap:6px 16px; font-size:0.86rem; margin-top:4px;}
+.hours-table span:nth-child(odd){color:var(--ink-soft);}
+.hours-table span:nth-child(even){color:var(--stone); text-align:right;}
+.social-row{display:flex; gap:12px; margin-top:24px;}
+.social-btn{width:42px; height:42px; border-radius:50%; border:1px solid var(--line); display:flex; align-items:center; justify-content:center; transition:0.25s ease;}
+.social-btn:hover{background:var(--gold); border-color:var(--gold); color:#fff;}
+.social-btn svg{width:18px; height:18px;}
+.map-frame{border-radius:14px; overflow:hidden; box-shadow:var(--shadow); border:1px solid var(--line);}
+.map-frame iframe{width:100%; height:420px; border:0; display:block;}
+
+/* ---------- CTA FINAL ---------- */
+.cta-final{background:linear-gradient(155deg, var(--gold), var(--gold-deep)); color:#fff; text-align:center;}
+.cta-final h2{color:#fff; font-size:clamp(2rem,4vw,2.8rem); max-width:680px; margin:0 auto;}
+.cta-final p{margin-top:18px; font-size:1.05rem; color:rgba(255,255,255,0.85); max-width:520px; margin-left:auto; margin-right:auto;}
+.cta-final .btn-primary{margin-top:30px; background:var(--ink);}
+.cta-final .btn-primary:hover{background:#000;}
+
+/* ---------- FOOTER ---------- */
+footer{background:var(--ink); color:rgba(250,248,244,0.55); padding:32px 0;}
+.foot-inner{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; font-size:0.82rem;}
+
+/* ---------- WHATSAPP FLOAT ---------- */
+.wa-float{position:fixed; right:22px; bottom:22px; z-index:150; width:58px; height:58px; border-radius:50%; background:#25D366; display:flex; align-items:center; justify-content:center; box-shadow:0 14px 32px -10px rgba(0,0,0,0.4); animation:pulse 2.6s ease infinite;}
+.wa-float svg{width:28px; height:28px; color:#fff;}
+@keyframes pulse{0%,100%{box-shadow:0 14px 32px -10px rgba(0,0,0,0.4);} 50%{box-shadow:0 14px 32px -10px rgba(37,211,102,0.7), 0 0 0 8px rgba(37,211,102,0.12);}}
+
+a:focus-visible, button:focus-visible{outline:2px solid var(--gold); outline-offset:3px;}
+
+</style>
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<header id="siteHeader">
+  <div class="container nav-inner">
+    <a href="#topo" class="logo-mark">
+      <img src="assets/logo.png" alt="Infinity Estética & Saúde">
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#oferta">Planos</a>
+      <a href="#contato">Localização</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#contato" class="btn btn-ghost">Contato</a>
+      <a href="https://wa.me/5548996380721?text=Ol%C3%A1%21%20Vim%20do%20Instagram%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.62-1.29 1.19-1.78 1.24-.46.05-.95.24-3.18-.66-2.68-1.09-4.4-3.8-4.53-3.98-.13-.18-1.08-1.44-1.08-2.75 0-1.3.68-1.94.92-2.2.24-.26.53-.32.7-.32.18 0 .35 0 .5.01.16.01.38-.06.6.46.22.53.75 1.83.82 1.96.07.13.11.29.02.47-.09.18-.14.29-.27.44-.14.16-.29.35-.41.47-.14.13-.28.28-.12.55.16.27.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.21 1.37.27.13.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.22.6-.13.25.09 1.57.74 1.84.87.27.13.45.2.51.31.07.11.07.62-.15 1.23z"/></svg>
+        <span>Agendar avaliação</span>
+      </a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="topo">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="reveal in">
+        <div class="hero-eyebrow"><span class="dot"></span><span class="eyebrow">Clínica de Estética · São José, SC</span></div>
+        <h1>Você merece se <em>sentir linda.</em></h1>
+        <p class="lede">Sou a Dra. Jessica Regina. Com mais de 2.000 atendimentos, minha experiência e comprometimento refletem-se no cuidado excepcional que ofereço a cada pessoa que cruza meu caminho.</p>
+        <div class="hero-actions">
+          <a href="https://wa.me/5548996380721?text=Ol%C3%A1%21%20Vim%20do%20Instagram%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.62-1.29 1.19-1.78 1.24-.46.05-.95.24-3.18-.66-2.68-1.09-4.4-3.8-4.53-3.98-.13-.18-1.08-1.44-1.08-2.75 0-1.3.68-1.94.92-2.2.24-.26.53-.32.7-.32.18 0 .35 0 .5.01.16.01.38-.06.6.46.22.53.75 1.83.82 1.96.07.13.11.29.02.47-.09.18-.14.29-.27.44-.14.16-.29.35-.41.47-.14.13-.28.28-.12.55.16.27.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.21 1.37.27.13.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.22.6-.13.25.09 1.57.74 1.84.87.27.13.45.2.51.31.07.11.07.62-.15 1.23z"/></svg>
+            Agendar avaliação
+          </a>
+          <a href="#servicos" class="btn btn-ghost">Ver tratamentos</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><b>5,0</b><span>nota média · 271 avaliações no Google</span></div>
+          <div class="stat"><b>2.000+</b><span>atendimentos realizados</span></div>
+        </div>
+      </div>
+      <div class="reveal in">
+        <div class="hero-photo-card">
+          <img src="assets/foto-dra-jessica.png" alt="Dra. Jessica Regina, Clínica Infinity">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" id="div1"><svg viewBox="0 0 70 36"><path d="M17,18 C17,9 25,3 35,10 C45,17 53,17 53,10 C53,3 45,3 35,10 C25,17 17,27 17,18 C17,9 25,3 35,10"/></svg></div>
+
+  <!-- SOBRE -->
+  <section class="sobre" id="sobre">
+    <div class="container">
+      <div class="sobre-inner reveal">
+        <p class="eyebrow">Quem é a Dra. Jessica Regina?</p>
+        <h2 style="margin-top:10px; font-size:clamp(1.9rem,3.2vw,2.4rem);">Uma profissional apaixonada por seu trabalho.</h2>
+        <p>Dedicada a promover a autoestima e o bem-estar de seus pacientes. Além de sua carreira na área da saúde, ela é mãe de uma princesa linda, encontrando equilíbrio entre sua vida profissional e familiar.</p>
+        <p>Casada e profundamente dedicada à sua família, a Dra. Jessica encontra inspiração em seu lar. Com mais de 2.000 atendimentos, sua experiência e comprometimento refletem-se no cuidado excepcional que oferece a cada pessoa que cruza seu caminho.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFERTA GRATUITA -->
+  <section class="lead">
+    <div class="container">
+      <div class="lead-grid">
+        <div class="reveal">
+          <p class="eyebrow">Não vá embora!</p>
+          <h2 style="margin-top:12px;">Você acaba de ganhar uma avaliação completa</h2>
+          <p>Fale com a nossa equipe pelo WhatsApp e agende sua avaliação gratuita para descobrir o tratamento ideal para você.</p>
+        </div>
+        <div class="lead-card reveal">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg></span>
+          <h3>Avaliação completa gratuita</h3>
+          <p>Oba! Quero agendar minha avaliação.</p>
+          <a href="https://wa.me/5548996380721?text=Ol%C3%A1%21%20Oba%2C%20quero%20agendar%20minha%20avalia%C3%A7%C3%A3o%20completa%20gratuita%21" target="_blank" rel="noopener" class="btn btn-primary">Quero agendar minha avaliação</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider dark" id="div2" style="background:var(--ink);"><svg viewBox="0 0 70 36"><path d="M17,18 C17,9 25,3 35,10 C45,17 53,17 53,10 C53,3 45,3 35,10 C25,17 17,27 17,18 C17,9 25,3 35,10" stroke="var(--gold)"/></svg></div>
+
+  <!-- SERVIÇOS -->
+  <section class="servicos" id="servicos">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Tratamentos em destaque</p>
+        <h2>Serviços em destaque</h2>
+        <p>Procedimentos realizados pela Dra. Jessica e equipe, com foco em resultado natural e seguro.</p>
+      </div>
+      <div class="serv-grid reveal">
+        <div class="serv-card stagger-item">
+          <h3>Preenchimento labial</h3>
+          <p>Harmonização dos lábios com resultado natural, respeitando as proporções do seu rosto.</p>
+          <a class="link" href="https://wa.me/5548996380721?text=Ol%C3%A1%21%20Quero%20saber%20mais%20sobre%20Preenchimento%20Labial." target="_blank" rel="noopener">Saber mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <div class="serv-card stagger-item">
+          <h3>Rinomodelação</h3>
+          <p>Ajuste do contorno nasal sem cirurgia, com procedimento rápido e resultado imediato.</p>
+          <a class="link" href="https://wa.me/5548996380721?text=Ol%C3%A1%21%20Quero%20saber%20mais%20sobre%20Rinomodela%C3%A7%C3%A3o." target="_blank" rel="noopener">Saber mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <div class="serv-card stagger-item">
+          <h3>Criolipólise</h3>
+          <p>Redução de gordura localizada através do resfriamento controlado das células adiposas.</p>
+          <a class="link" href="https://wa.me/5548996380721?text=Ol%C3%A1%21%20Quero%20saber%20mais%20sobre%20Criolip%C3%B3lise." target="_blank" rel="noopener">Saber mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <div class="serv-card stagger-item">
+          <h3>Lipo sem corte</h3>
+          <p>Contorno corporal sem cirurgia, sem cortes e sem tempo de afastamento da rotina.</p>
+          <a class="link" href="https://wa.me/5548996380721?text=Ol%C3%A1%21%20Quero%20saber%20mais%20sobre%20Lipo%20sem%20Corte." target="_blank" rel="noopener">Saber mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFERTA -->
+  <section class="oferta" id="oferta">
+    <div class="container">
+      <div class="section-head center reveal" style="margin-left:auto;margin-right:auto;">
+        <p class="eyebrow">Como agendar</p>
+        <h2>Escolha o ritmo do seu tratamento</h2>
+        <p>Fale com a nossa equipe pelo WhatsApp para confirmar disponibilidade, valores e o que está incluso em cada formato.</p>
+      </div>
+      <div class="plan-grid reveal">
+        <div class="plan stagger-item">
+          <div class="plan-name">Avaliação pontual</div>
+          <p class="plan-desc">Sua avaliação completa gratuita, para indicar o tratamento ideal para você.</p>
+          <a href="https://wa.me/5548996380721?text=Ol%C3%A1%21%20Quero%20saber%20mais%20sobre%20a%20Avalia%C3%A7%C3%A3o%20Pontual." target="_blank" rel="noopener" class="btn btn-ghost">Falar no WhatsApp</a>
+        </div>
+        <div class="plan featured stagger-item">
+          <span class="tag">Mais procurado</span>
+          <div class="plan-name">Protocolo 90 dias</div>
+          <p class="plan-desc">Sessões ao longo de 3 meses, com acompanhamento e ajustes conforme sua evolução.</p>
+          <a href="https://wa.me/5548996380721?text=Ol%C3%A1%21%20Quero%20saber%20mais%20sobre%20o%20Protocolo%20de%2090%20dias." target="_blank" rel="noopener" class="btn btn-primary">Falar no WhatsApp</a>
+        </div>
+        <div class="plan stagger-item">
+          <div class="plan-name">Protocolo 180 dias</div>
+          <p class="plan-desc">Para uma transformação mais completa, com suporte estendido.</p>
+          <a href="https://wa.me/5548996380721?text=Ol%C3%A1%21%20Quero%20saber%20mais%20sobre%20o%20Protocolo%20de%20180%20dias." target="_blank" rel="noopener" class="btn btn-ghost">Falar no WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROVA SOCIAL -->
+  <section class="social-proof">
+    <div class="container">
+      <div class="proof-stat reveal">
+        <b>5,0</b>
+        <span>· 271 avaliações reais no Google</span>
+      </div>
+      <div class="testi-grid reveal">
+        <div class="testi-card stagger-item">
+          <p>"Parabéns pelo profissionalismo meninas, vcs são nota 1000!"</p>
+          <div class="who">Avaliação no Google</div>
+        </div>
+        <div class="testi-card stagger-item">
+          <p>"Trabalho perfeito, atendimento de primeira e resultado além das expectativas!"</p>
+          <div class="who">Avaliação no Google</div>
+        </div>
+        <div class="testi-card stagger-item">
+          <p>"Quero deixar meu agradecimento à Dra. Jessica e à Lidi pelo atendimento impecável. Fiz preenchimento labial, rinomodelação, criolipólise e lipo sem corte, e fiquei extremamente feliz com todos os resultados."</p>
+          <div class="who">Allice Moreira</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCALIZAÇÃO -->
+  <section class="local" id="contato">
+    <div class="container">
+      <div class="local-grid">
+        <div class="reveal">
+          <p class="eyebrow">Onde e como chegar</p>
+          <h2 style="margin-top:10px; font-size:clamp(1.9rem,3.2vw,2.4rem);">Agende sua avaliação em São José.</h2>
+          <div class="local-card" style="margin-top:32px;">
+            <div class="info-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-7.58 8-13A8 8 0 1 0 4 9c0 5.42 8 13 8 13z"/><circle cx="12" cy="9" r="3"/></svg>
+              <div><h4>Endereço</h4><p>Rua Jorge Turíbio Rodrigues, 19, Areias, São José - SC, 88113-600</p></div>
+            </div>
+            <div class="info-row">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.62-1.29 1.19-1.78 1.24-.46.05-.95.24-3.18-.66-2.68-1.09-4.4-3.8-4.53-3.98-.13-.18-1.08-1.44-1.08-2.75 0-1.3.68-1.94.92-2.2.24-.26.53-.32.7-.32.18 0 .35 0 .5.01.16.01.38-.06.6.46.22.53.75 1.83.82 1.96.07.13.11.29.02.47-.09.18-.14.29-.27.44-.14.16-.29.35-.41.47-.14.13-.28.28-.12.55.16.27.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.21 1.37.27.13.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.22.6-.13.25.09 1.57.74 1.84.87.27.13.45.2.51.31.07.11.07.62-.15 1.23z"/></svg>
+              <div><h4>WhatsApp</h4><a href="https://wa.me/5548996380721?text=Ol%C3%A1%21%20Vim%20do%20Instagram%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">(48) 99638-0721</a></div>
+            </div>
+            <div class="info-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+              <div>
+                <h4>Atendimento</h4>
+                <div class="hours-table">
+                  <span>Segunda a sexta</span><span>10:00–12:00</span>
+                  <span></span><span>13:00–19:30</span>
+                </div>
+              </div>
+            </div>
+            <div class="social-row">
+              <a class="social-btn" href="https://www.instagram.com/clinicainfinitydrajessica/" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="map-frame reveal">
+          <iframe src="https://www.google.com/maps?q=Rua+Jorge+Tur%C3%ADbio+Rodrigues,+19,+Areias,+S%C3%A3o+Jos%C3%A9+-+SC&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa da Clínica Infinity"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-final">
+    <div class="container reveal">
+      <p class="eyebrow" style="color:rgba(255,255,255,0.8);">Você merece se sentir linda</p>
+      <h2 style="margin-top:14px;">Pronta para começar sua transformação?</h2>
+      <p>Fale com a nossa equipe agora pelo WhatsApp e agende sua avaliação completa gratuita.</p>
+      <a href="https://wa.me/5548996380721?text=Ol%C3%A1%21%20Vim%20do%20Instagram%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.62-1.29 1.19-1.78 1.24-.46.05-.95.24-3.18-.66-2.68-1.09-4.4-3.8-4.53-3.98-.13-.18-1.08-1.44-1.08-2.75 0-1.3.68-1.94.92-2.2.24-.26.53-.32.7-.32.18 0 .35 0 .5.01.16.01.38-.06.6.46.22.53.75 1.83.82 1.96.07.13.11.29.02.47-.09.18-.14.29-.27.44-.14.16-.29.35-.41.47-.14.13-.28.28-.12.55.16.27.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.21 1.37.27.13.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.22.6-.13.25.09 1.57.74 1.84.87.27.13.45.2.51.31.07.11.07.62-.15 1.23z"/></svg>
+        Agendar avaliação
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container foot-inner">
+    <span>© 2026 Infinity Estética & Saúde · Dra. Jessica Regina</span>
+    <span>@clinicainfinitydrajessica</span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5548996380721?text=Ol%C3%A1%21%20Vim%20do%20Instagram%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.62-1.29 1.19-1.78 1.24-.46.05-.95.24-3.18-.66-2.68-1.09-4.4-3.8-4.53-3.98-.13-.18-1.08-1.44-1.08-2.75 0-1.3.68-1.94.92-2.2.24-.26.53-.32.7-.32.18 0 .35 0 .5.01.16.01.38-.06.6.46.22.53.75 1.83.82 1.96.07.13.11.29.02.47-.09.18-.14.29-.27.44-.14.16-.29.35-.41.47-.14.13-.28.28-.12.55.16.27.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.21 1.37.27.13.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.22.6-.13.25.09 1.57.74 1.84.87.27.13.45.2.51.31.07.11.07.62-.15 1.23z"/></svg>
+</a>
+
+<script>
+(function(){
+  const header = document.getElementById('siteHeader');
+  const progress = document.getElementById('scrollProgress');
+
+  let ticking = false;
+  const onScroll = () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const y = window.scrollY;
+      header.classList.toggle('scrolled', y > 40);
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.width = (docHeight > 0 ? (y / docHeight) * 100 : 0) + '%';
+      ticking = false;
+    });
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  const toggle = document.getElementById('menuToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+  const revealEls = document.querySelectorAll('.reveal, .divider');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add(entry.target.classList.contains('divider') ? 'revealed' : 'in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.15});
+  revealEls.forEach(el => io.observe(el));
+
+  const staggerGroups = document.querySelectorAll('.serv-grid, .plan-grid, .testi-grid');
+  const groupIo = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const items = entry.target.querySelectorAll('.stagger-item');
+        items.forEach((item, i) => {
+          item.style.transitionDelay = (i * 70) + 'ms';
+          item.classList.add('in');
+        });
+        groupIo.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.1});
+  staggerGroups.forEach(el => groupIo.observe(el));
+})();
+</script>
+
+</body>
+</html>
